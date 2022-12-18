@@ -68,3 +68,4 @@ persist as long as the function using them is alive, then you should use the sta
 If you need variables like arrays and structs that can change size dynamically (e.g. arrays that can grow or 
 shrink as needed) then you will likely need to allocate them on the heap.
 */
+
