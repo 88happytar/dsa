@@ -10,6 +10,7 @@ void display(int array[], int arraySize)
     cout << endl;
 }
 
+
 void swap(int *x,int *y)
 {
     int temp=*x;
