@@ -1,20 +1,13 @@
 #include <iostream>
 using namespace std;
 
-struct Array
+void display(int array[], int arraySize)
 {
-    int A[9];
-    int length;
-};
-
-void display(struct Array arr)
-{
-    int i;
-    cout << "Elements are ";
-    for(i=0;i<arr.length;i++) {
-        cout << arr.A[i] << " ";
-    } 
-    cout << endl;   
+    for(int i=0; i<arraySize; i++)
+    {
+        cout << array[i] << ":";
+    }
+    cout << endl;
 }
 
 void swap(int *x,int *y)
@@ -24,20 +17,24 @@ void swap(int *x,int *y)
     *y=temp;
 }
 
-int binarySearch(struct Array arr, int key)
+int binarySearch(int array[], int arraySize, int key)
 {
     int l,mid,h;
-    l=0;
-    h=arr.length-1;
+    l = 0;
+    h = arraySize-1;
     while(l<=h)
     {
         mid=(l+h)/2;
-        if(key==arr.A[mid])
+        if(key == array[mid])
+        {
             return mid;
-        else if(key<arr.A[mid])
+        } else if(key < array[mid])
+        {
             h=mid-1;
-        else
+        } else
+        {
             l=mid+1;
+        }   
     }
     return -1;
 }
@@ -64,16 +61,16 @@ int binarySearch2(int a[], int l, int h, int key)
 
 int main()
 {
-    struct Array arr1={{2,3,9,16,18,21,28,32,35},9};
-    display(arr1);  
+    int intArray[] = {2,3,9,16,18,21,28,32,35};
+    int arraySize = 9;
+    display(intArray, arraySize);  
     int key = 16;
 
     // method 1
-    //int index = binarySearch(arr1, key);
+    //int index = binarySearch(intArray, arraySize, key);
 
     // method 2
-    int intArray[] = {2,3,9,16,18,21,28,32,35};
-    int index = binarySearch2(intArray, 0, 8, key);
+    int index = binarySearch2(intArray, 0, arraySize-1, key);
 
     if (index!=-1) {
         cout << "The Key " << key << " is found at index of " << index << endl;
