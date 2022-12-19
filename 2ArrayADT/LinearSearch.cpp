@@ -1,5 +1,4 @@
 #include <iostream>
-#include <array>
 using namespace std;
 
 int simpleLinearSearch(int key, int array[], int arraySize) {
@@ -20,6 +19,15 @@ void swap(int* x, int* y)
     int temp = *x; // Store the value store at x in a variable temp   
     *x = *y; // Swapping of value
     *y = temp;
+}
+
+void swap(int x, int y)
+{  
+    cout << "0x=" << x  << "y=" << y << endl;
+    int temp = x; 
+    x = y; 
+    y = temp;
+    cout << "1x=" << x  << "y=" << y << endl;
 }
 
 void display(int array[], int arraySize)
@@ -59,7 +67,7 @@ int linearSearchTransposition(int key, int array[], int arraySize) {
 int main()
 {
     int array[10] = {2, 4, 6, 8, 12, 3, 5, 7, 9, 1};
-    int arraySize =10;
+    int arraySize =10; 
     int key;
     cout << "Enter a Key element ";
     cin >> key;
