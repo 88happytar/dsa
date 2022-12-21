@@ -41,10 +41,10 @@ int count(Node* p)
 }
 
 //TC=O(n), SC = O(n)
-int RecursiveCount(Node* p)
+int recursiveCount(Node* p)
 {
     if(p != NULL){
-        return RecursiveCount(p->next)+1;
+        return recursiveCount(p->next)+1;
     }
     else 
     {
@@ -63,7 +63,7 @@ int sum(Node* p)
     return s;
 }
 
-int RecursiveSum(Node *p)
+int recursiveSum(Node *p)
 {
     if(p == NULL)
     {
@@ -71,7 +71,7 @@ int RecursiveSum(Node *p)
     }       
     else
     {
-        return RecursiveSum(p->next) + p->data;
+        return recursiveSum(p->next) + p->data;
     }
         
 }
@@ -80,19 +80,18 @@ int main()
 {
     int A[] = {3,5,7,10,25,8,32,2};
     Node* first = create(A,8);
-    
    
     int sumResult = sum(first);
     cout << "sum Linked List => sum=" << sumResult << endl;
 
-    int sumResult1 = RecursiveSum(first);
-    cout << "RecursiveSum Linked List => sum=" << sumResult1 << endl;
+    int sumResult1 = recursiveSum(first);
+    cout << "recursiveSum Linked List => sum=" << sumResult1 << endl;
 
     int countResult = count(first);
     cout << "count Linked List => countResult=" << countResult  << endl;
 
-    int countResult1 = RecursiveCount(first);
-    cout << "RecursiveCount Linked List => countResult=" << countResult1  << endl;
+    int countResult1 = recursiveCount(first);
+    cout << "recursiveCount Linked List => countResult=" << countResult1  << endl;
 
     return 0;
 }
