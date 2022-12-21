@@ -111,7 +111,5 @@ int main()
     else
         cout << "LSearch Linked List key not found"<<endl;
 
-    
-
     return 0;
 }
