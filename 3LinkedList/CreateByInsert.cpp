@@ -14,6 +14,7 @@ void Display(Node* p)
         cout << p->data << " ";
         p=p->next;
     }
+    cout << endl;
 }
 
 Node* findLastNode(Node* head)
@@ -86,13 +87,11 @@ int main()
     first = Insert(first,1,10);
     cout << "After Insert => ";
     Display(first);
-    cout << endl;
 
     first = Insertlast(first, 20);
      first = Insertlast(first, 23);
     cout << "After Insertlast => ";
     Display(first);
-    cout << endl;
 
     return 0;
 }

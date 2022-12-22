@@ -35,6 +35,7 @@ void Display(Node* p)
         cout << p->data << " ";
         p=p->next;
     }
+    cout << endl;
 }
 
 int isSorted(struct Node *p)
@@ -55,11 +56,9 @@ int main()
 {
     int A[]={3,5,7,10,25,8,32,2};
     // int A[]={2, 3,5,7,8,10,25,32};
-    Node* first = create(A,8); 
     
-    cout << "Display Linked List => ";
+    Node* first = create(A,8); 
     Display(first);
-    cout << endl;
 
     int result = isSorted(first);
     cout << "isSorted = "<< result;
