@@ -103,6 +103,7 @@ int main()
     Display(first);
 
     // inplace replacement, so the content of first are changed
+    // Use debug to check
     Reverse1(first);
     Display(first);
 
