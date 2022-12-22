@@ -32,6 +32,8 @@ Node* findLastNode(Node* head)
         // If not then move to the next node
         temp = temp->next;
     }
+
+    return head;
 }
 
 Node* Insert(Node *first, int index, int x)
