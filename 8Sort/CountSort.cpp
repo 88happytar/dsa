@@ -11,6 +11,7 @@ int findMax(int A[],int n)
     }
     return max;
 }
+
 void CountSort(int A[],int n)
 {
     int i,j,max,*C;
