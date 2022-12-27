@@ -2,7 +2,6 @@
 #include<cmath>
 #include<stack>
 using namespace std;
-//string post = "53+62/*35*+";  //39
 
 // The function calculate_Postfix returns the final answer of the expression after calculation
 int calculatePostfix(string post_exp)
