@@ -57,43 +57,6 @@ public:
     int Count(Node *root);
 };
 
-/**void Tree::CreateTree()
-{
-    Node *p,*t=NULL;
-    int x;
-    queue<Node*> q;
-    printf("Enter root value \n");
-    scanf("%d",&x);
-    root = new Node;
-    root->data = x;
-    root->lchild = root->rchild=NULL;
-    q.push(root);
-
-    while(q.size()<3) {
-        p = q.front();
-        q.pop();
-        printf("Enter left child of %d\n ",p->data);
-        scanf("%d",&x);
-        if(x!=-1) {
-            t=new Node;
-            t->data=x;
-            t->lchild=t->rchild=NULL;
-            p->lchild=t;
-            q.push(t);
-        }
-        printf("Enter right child of %d\n ",p->data);
-        scanf("%d",&x);
-        if(x!=-1) {
-            t=new Node;
-            t->data=x;
-            t->lchild=t->rchild=NULL;
-            p->rchild=t;
-            q.push(t);
-        }
-    }
-}
-*/
-
 void Tree::Preorder(Node *p)
 {
     if(p) {
